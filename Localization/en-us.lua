@@ -83,6 +83,17 @@ return {
             },
         },
 
+        j_mot_gokubaseJ = {
+            name = "Goku (Base)",
+            text = {
+                "{C:mult}#5x#{}",
+                "increases by {C:mult}$#15#{} after 3 blinds.",
+                "Transforms after 5 blinds beaten."
+                "{C:inactive}#Currently x blinds#"
+            },
+        },
+    },
+
         Spectral = {
             c_mot_bermuda = {
                 name = "Bermuda",
