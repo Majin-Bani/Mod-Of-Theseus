@@ -44,33 +44,3 @@ SMODS.Joker {
         return card.ability.extra.dollars
     end
 }
-
-SMODS.Joker {
-    key = "gokubaseJ",
-    atlas = "RareJ",
-    rarity = 3,
-    pos = {x = 0, y = 0},
-    config = { extra = {X_mult = 5, points = 0, points_max = 5, mult_mod = 15} },
-    cost = 10,
-    blueprint_compat = false,
-    loc_vars = function (self, info_queue, card)
-        return { vars = { card.ability.extra.X_mult, card.ability.extra.mult_mod, card.extra.points, card.extra.points_max } }
-    end,
-    
-    calculate = function (self, context)
-        if context.end_of_round == true and context.cardarea.== G.jokers and game_over = false then
-            {
-                card.extra.points = card.extra.points + 1
-                if card.extra.points = 3 {
-                    card.extra.X_mult + card.extra.Xmult_mod
-                }
-                if card.extra.points == card.extra.points_max{
-                    G.jokers:remove_card(self)
-                    card:remove()
-                }
-            }
-        if context.cardarea == G.jokers and context.joker_main then
-            return {Xmult_mod = card.ability.extra.X_mult}
-        end
-    end,
-}
